@@ -145,7 +145,7 @@ const learning = [
   gap: 3rem;
   color: var(--text-color);
   padding-bottom: 4rem;
-  border-bottom: solid 5px;
+  border-bottom: solid 5px black;
 }
 
 /* Hero Section */

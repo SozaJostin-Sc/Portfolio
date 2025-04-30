@@ -1,12 +1,19 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
-import "../assets/themes.css";
-import { Avatar } from "../assets/index";
+import { ref, onMounted, onUnmounted, computed } from "vue";
+import { useThemeStore } from "../stores/theme";
+import { Avatar, AvatarLight } from "../assets/index";
+
+const themeStore = useThemeStore();
+
 const text = `Hi,\nI'm a frontend developer\nspecialized in Vue.js`;
-const speed = 50; // Velocidad aumentada para mejor experiencia
+const speed = 50;
 const dialogueText = ref("");
 const showCursor = ref(true);
 const isTyping = ref(true);
+
+const avatarSrc = computed(() =>
+  themeStore.isDarkMode ? AvatarLight : Avatar
+);
 
 let i = 0;
 let typingTimeout;
@@ -19,7 +26,6 @@ function typeWriter() {
     typingTimeout = setTimeout(typeWriter, speed);
   } else {
     isTyping.value = false;
-    // Cursor parpadea 3 veces antes de desaparecer
     let blinkCount = 0;
     const blinkInterval = setInterval(() => {
       showCursor.value = !showCursor.value;
@@ -43,7 +49,7 @@ onUnmounted(() => {
 
 <template>
   <div class="pixel-dialogue">
-    <img class="pixel-character" :src="Avatar" alt="Pixel character" />
+    <img class="pixel-character" :src="avatarSrc" alt="Pixel character" />
     <div class="pixel-textbox">
       <div class="pixel-name">Jostin Soza</div>
       <div
