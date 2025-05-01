@@ -3,7 +3,7 @@ import "../assets/themes.css";
 import { AvatarLight } from "../assets";
 //SECRET FUNCTION
 function showSecret() {
-  alert("¡SECRETO DESBLOQUEADO! +10 PUNTOS");
+  alert("¡UNLOCKED SECRET! +10 POINTS");
 }
 </script>
 
@@ -49,13 +49,13 @@ function showSecret() {
           <h3 class="pixel-subtitle">POWER-UPS:</h3>
           <ul class="pixel-menu">
             <li>
-              <a href="#main" class="pixel-link">INICIO</a>
+              <a href="#main" class="pixel-link">START</a>
             </li>
             <li>
-              <a href="#Projects" class="pixel-link">PROYECTOS</a>
+              <a href="#Projects" class="pixel-link">PROJECTS</a>
             </li>
             <li>
-              <a href="#Contact" class="pixel-link">CONTACTO</a>
+              <a href="#Contact" class="pixel-link">CONTACT</a>
             </li>
           </ul>
         </div>
