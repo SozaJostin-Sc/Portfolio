@@ -5,7 +5,7 @@ import { Avatar, AvatarLight } from "../assets/index";
 
 const themeStore = useThemeStore();
 
-const text = `Hi,\nI'm a frontend developer\nspecialized in Vue.js`;
+const text = `Hi,\nI'm a frontend developer\npassionate to Vue and React`;
 const speed = 50;
 const dialogueText = ref("");
 const showCursor = ref(true);

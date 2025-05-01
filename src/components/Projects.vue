@@ -1,6 +1,6 @@
 <script setup>
 import "../assets/themes.css";
-import { Blog } from "../assets/index";
+import { Blog, ApiOnePiece } from "../assets/index";
 const projects = [
   {
     id: 1,
@@ -10,6 +10,15 @@ const projects = [
       "A simple and responsive blog built with React — my first project using this framework, focused on learning component structure, props, and basic state management.",
     tags: ["React.Js", "Tailwindcss", "TypeScript", "Vite"],
     link: "https://blog-poject.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "One Piece Api",
+    image: ApiOnePiece,
+    description:
+      "One Piece Devil Fruit Encyclopedia is a Vue.js app where fans can browse, search, and explore Devil Fruits by type, powers, and users. With a responsive card UI, live search, and data from the One Piece API, it’s a fun way to discover these iconic fruits.",
+    tags: ["Vue", "Tailwindcss", "Javascript", "Vite"],
+    link: "https://one-piece-api-one.vercel.app/",
   },
   //i will add some more....
 ];

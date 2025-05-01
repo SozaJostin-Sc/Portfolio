@@ -22,7 +22,9 @@ import linkedin from "./social_media/linkedin.svg";
 import CV from "./cv/CV-Es.pdf";
 //Projects
 import Blog from "./Projects/blog.png";
+import ApiOnePiece from "./Projects/ApiOnePiece.png";
 export {
+  ApiOnePiece,
   Avatar,
   AvatarLight,
   CatWhite,
