@@ -130,7 +130,7 @@
   --pixel-footer-divider-green: #77dd77;
   --pixel-footer-divider-pink: #ff88ff;
   --pixel-footer-subtitle: #ffcc00;
-  --pixel-footer-subtitle-shadow: #fff;
+  --pixel-footer-subtitle-shadow: #1b1a1a !important;
   --pixel-footer-icon-bg: #222;
   --pixel-footer-icon-hover: #333;
   --pixel-footer-tooltip-bg: #fff;

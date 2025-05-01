@@ -1,9 +1,8 @@
 <template>
-  <!-- El template se mantiene igual -->
   <section id="Contact" class="pixel-contact">
     <div class="pixel-container">
       <h2 class="pixel-title">
-        <span class="pixel-text">CONTACTO</span>
+        <span class="pixel-text">CONTACT</span>
         <span class="pixel-corner top-left"></span>
         <span class="pixel-corner top-right"></span>
         <span class="pixel-corner bottom-left"></span>
@@ -13,13 +12,14 @@
       <div class="pixel-form-container">
         <form @submit.prevent="submitForm" class="pixel-form">
           <div class="pixel-input-group">
-            <label for="name" class="pixel-label">NOMBRE:</label>
+            <label for="name" class="pixel-label">NAME:</label>
             <input
               type="text"
               id="name"
               v-model="form.name"
               class="pixel-input"
-              placeholder="EJ: LINK"
+              placeholder="EX: LINK"
+              required
             />
           </div>
 
@@ -30,24 +30,30 @@
               id="email"
               v-model="form.email"
               class="pixel-input"
-              placeholder="EJ: LINK@HYRULE.KINGDOM"
+              placeholder="EX: LINK@HYRULE.KINGDOM"
+              required
             />
           </div>
 
           <div class="pixel-input-group">
-            <label for="message" class="pixel-label">MENSAJE:</label>
+            <label for="message" class="pixel-label">MESSAGE:</label>
             <textarea
               id="message"
               v-model="form.message"
               class="pixel-textarea"
-              placeholder="¡HOLA! NECESITO UN HÉROE..."
+              placeholder="HEY! I need your help..."
+              required
             ></textarea>
           </div>
 
-          <button type="submit" class="pixel-button">
-            <span class="pixel-button-text">ENVIAR</span>
+          <button type="submit" class="pixel-button" :disabled="loading">
+            <span class="pixel-button-text">
+              {{ loading ? "SENDING..." : "SEND" }}
+            </span>
             <span class="pixel-button-shadow"></span>
           </button>
+
+          <p v-if="error" class="pixel-error">⚠️ {{ error }}</p>
         </form>
 
         <div class="pixel-art">
@@ -55,7 +61,7 @@
             <div class="pixel-char-head"></div>
             <div class="pixel-char-body"></div>
           </div>
-          <p class="pixel-hint">* LOS MENSAJES VIAJAN POR PACKET</p>
+          <p class="pixel-hint">* MESSAGES TRAVEL THROUGH PORTALS</p>
         </div>
       </div>
     </div>
@@ -63,7 +69,9 @@
 </template>
 
 <script>
+import emailjs from "@emailjs/browser";
 import "../assets/themes.css";
+
 export default {
   data() {
     return {
@@ -72,21 +80,67 @@ export default {
         email: "",
         message: "",
       },
+      loading: false,
+      error: null,
+      success: false,
     };
   },
   methods: {
-    submitForm() {
-      console.log("Formulario enviado:", this.form);
-      alert(
-        `🎮 ${this.form.name.toUpperCase()}, TU MENSAJE FUE ENVIADO (SIMULADO)`
-      );
-      this.form = { name: "", email: "", message: "" };
+    async submitForm() {
+      if (!this.form.name || !this.form.email || !this.form.message) {
+        this.error = "MISSING PIXELS! PLEASE FILL ALL FIELDS";
+        return;
+      }
+
+      this.loading = true;
+      this.error = null;
+
+      try {
+        await emailjs.send(
+          "service_epofe8g",
+          "template_xp8ejjf",
+          {
+            name: this.form.name,
+            email: this.form.email,
+            message: this.form.message,
+            time: new Date().toLocaleString(),
+          },
+          "zs6eux7ZG44blcLls"
+        );
+
+        this.success = true;
+        alert(`🎮 ${this.form.name.toUpperCase()}, MESSAGE SUCCESSFULLY SENT!`);
+        this.form = { name: "", email: "", message: "" };
+      } catch (error) {
+        console.error("Portal failure:", error);
+        this.error = "PORTAL COLLAPSED! TRY AGAIN LATER";
+        alert("💀 ERROR: MESSAGE LOST IN THE VOID");
+      } finally {
+        this.loading = false;
+      }
     },
+  },
+  mounted() {
+    emailjs.init("zs6eux7ZG44blcLls");
   },
 };
 </script>
 
 <style scoped>
+.pixel-error {
+  color: #ff5555;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.pixel-button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: translate(4px, 4px);
+  box-shadow: 1px 1px 0 var(--pixel-contact-button-shadow);
+}
 /* Estilos aplicados con las variables */
 .pixel-contact {
   background-color: var(--pixel-contact-bg);
@@ -137,7 +191,6 @@ export default {
   color: var(--pixel-contact-hint);
 }
 
-/* El resto del CSS se mantiene igual */
 .pixel-contact {
   padding: 2rem;
   font-family: "VT323", monospace;
