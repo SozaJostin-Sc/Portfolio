@@ -2,11 +2,11 @@
   /*navbar*/
   --pixel-border: 3px solid #000;
   --pixel-shadow: 4px 4px 0 #000;
-  --pixel-bg: #b83a2d;
+  --pixel-bg: #283a59;
   --pixel-text: #fff;
   --pixel-accent: #ffcc00;
   /*Main*/
-  --main-bg: #dcc9a9;
+  --main-bg: #d9c7ad;
   --text-color: #2d3748;
   --accent-color: #4f46e5;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -19,7 +19,7 @@
   --pixel-card-accent: #6c5ce7;
 
   /*Projects*/
-  --project-bg: #658761;
+  --project-bg: #bf9760;
   --project-card-bg: #ffffff;
   --project-accent: #6c5ce7;
   --project-text: #2d3436;
@@ -28,7 +28,7 @@
   --project-transition: all 0.2s ease;
 
   /*contact*/
-  --pixel-contact-bg: #2d2d2d;
+  --pixel-contact-bg: #402f23;
   --pixel-contact-text: #e0e0e0;
   --pixel-contact-title-bg: #4a4a4a;
   --pixel-contact-title-text: #f0f0f0;

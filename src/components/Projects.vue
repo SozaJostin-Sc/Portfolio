@@ -1,6 +1,7 @@
 <script setup>
 import "../assets/themes.css";
 import { Blog, ApiOnePiece } from "../assets/index";
+
 const projects = [
   {
     id: 1,
@@ -20,11 +21,12 @@ const projects = [
     tags: ["Vue", "Tailwindcss", "Javascript", "Vite"],
     link: "https://one-piece-api-one.vercel.app/",
   },
-  //i will add some more....
 ];
 
 const openProject = (project) => {
-  window.open(project.link, "_blank");
+  if (project?.link && typeof project.link === "string") {
+    window.open(project.link, "_blank");
+  }
 };
 </script>
 
@@ -39,13 +41,15 @@ const openProject = (project) => {
 
       <div class="projects-grid">
         <article
-          v-for="project in projects"
+          v-for="(project, index) in projects"
           :key="project.id"
           class="project-card"
           role="article"
           tabindex="0"
           @click="openProject(project)"
           @keydown.enter="openProject(project)"
+          data-aos="fade-up"
+          :data-aos-delay="index * 100"
         >
           <div class="project-image-container">
             <img
@@ -186,11 +190,18 @@ const openProject = (project) => {
   background: #dfe6e9;
   color: #636e72;
   padding: 0.25rem 0.75rem;
-  border-radius: 0;
+  border-radius: 4px;
   font-size: 0.75rem;
   font-weight: bold;
   border: 2px solid #000;
   box-shadow: 2px 2px 0 #000;
+  transition: background 0.2s, color 0.2s;
+}
+
+.project-tag:hover {
+  background: #b2bec3;
+  color: #2d3436;
+  cursor: default;
 }
 
 /* Responsive */

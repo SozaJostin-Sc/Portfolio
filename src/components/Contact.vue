@@ -70,6 +70,8 @@
 
 <script>
 import emailjs from "@emailjs/browser";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "../assets/themes.css";
 
 export default {
@@ -246,7 +248,7 @@ export default {
 .pixel-textarea {
   border: 3px solid;
   padding: 0.8rem;
-  font-family: "VT323", monospace;
+  font-family: "Pixelify Sans", sans-serif;
   font-size: 1.2rem;
   width: 100%;
   box-sizing: border-box;
@@ -273,7 +275,7 @@ export default {
   position: relative;
   border: none;
   padding: 0.8rem 1.5rem;
-  font-family: "VT323", monospace;
+  font-family: "Pixelify Sans", sans-serif;
   font-size: 1.5rem;
   cursor: pointer;
   margin-top: 1rem;
