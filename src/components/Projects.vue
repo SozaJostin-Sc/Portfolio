@@ -1,6 +1,6 @@
 <script setup>
 import "../assets/themes.css";
-import { Blog, ApiOnePiece, Cofee } from "../assets/index";
+import { Blog, ApiOnePiece, Coffe } from "../assets/index";
 
 const projects = [
   {
@@ -24,7 +24,7 @@ const projects = [
   {
     id: 3,
     title: "Cofee Landing Page",
-    img: Cofee,
+    image: Coffe,
     description:
       "A modern, responsive landing page for a specialty coffee shop, designed to showcase artisanal coffee, menu items, and the café's cozy atmosphere. ",
     tags: ["HTML5", "CSS", "Javascript"],

@@ -16,6 +16,7 @@ import {
   vue,
   react,
   CV,
+  Hi,
 } from "../assets/index";
 // Datos para hacer el componente más mantenible
 const socialLinks = [
@@ -62,8 +63,14 @@ const learning = [
       <Card class="hero-card" />
       <div class="hero-content">
         <h1 id="hero-heading" class="hero-title">
-          Hello! <span class="hand-wave">👋</span>
+          <span class="hello-inline">
+            Hello!
+            <span class="hand-wave">
+              <img :src="Hi" alt="Hello hand wave" />
+            </span>
+          </span>
         </h1>
+
         <p class="hero-description">
           Junior web developer with a focus on clean code, responsive design,
           and continuous learning.
@@ -182,10 +189,22 @@ const learning = [
   font-weight: 700;
 }
 
+.hello-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .hand-wave {
   animation: wave 2s infinite;
   display: inline-block;
   transform-origin: 70% 70%;
+}
+
+.hand-wave img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
 }
 
 @keyframes wave {

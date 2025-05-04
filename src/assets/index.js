@@ -15,6 +15,7 @@ import react from "./skills/react.png";
 import tailwindcss from "./skills/tailwindcss.png";
 import vue from "./skills/vue.png";
 import js from "./skills/js.png";
+import Hi from "./hi.png";
 //social media
 import cv from "./social_media/cv.png";
 import linkedin from "./social_media/linkedin.svg";
@@ -23,7 +24,8 @@ import CV from "./cv/CV-Es.pdf";
 //Projects
 import Blog from "./Projects/blog.png";
 import ApiOnePiece from "./Projects/ApiOnePiece.png";
-import Cofee from "./Projects/cofee.png";
+import Coffe from "./Projects/coffe.png";
+
 export {
   ApiOnePiece,
   Avatar,
@@ -46,5 +48,6 @@ export {
   cv,
   Blog,
   linkedin,
-  Cofee,
+  Coffe,
+  Hi,
 };
