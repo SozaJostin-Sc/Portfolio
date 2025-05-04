@@ -23,6 +23,7 @@ import CV from "./cv/CV-Es.pdf";
 //Projects
 import Blog from "./Projects/blog.png";
 import ApiOnePiece from "./Projects/ApiOnePiece.png";
+import Cofee from "./Projects/cofee.png";
 export {
   ApiOnePiece,
   Avatar,
@@ -45,4 +46,5 @@ export {
   cv,
   Blog,
   linkedin,
+  Cofee,
 };

@@ -1,6 +1,6 @@
 <script setup>
 import "../assets/themes.css";
-import { Blog, ApiOnePiece } from "../assets/index";
+import { Blog, ApiOnePiece, Cofee } from "../assets/index";
 
 const projects = [
   {
@@ -20,6 +20,15 @@ const projects = [
       "One Piece Devil Fruit Encyclopedia is a Vue.js app where fans can browse, search, and explore Devil Fruits by type, powers, and users. With a responsive card UI, live search, and data from the One Piece API, it’s a fun way to discover these iconic fruits.",
     tags: ["Vue", "Tailwindcss", "Javascript", "Vite"],
     link: "https://one-piece-api-one.vercel.app/",
+  },
+  {
+    id: 3,
+    title: "Cofee Landing Page",
+    img: Cofee,
+    description:
+      "A modern, responsive landing page for a specialty coffee shop, designed to showcase artisanal coffee, menu items, and the café's cozy atmosphere. ",
+    tags: ["HTML5", "CSS", "Javascript"],
+    link: "https://sozajostin-sc.github.io/CoffeLandingPage/",
   },
 ];
 
