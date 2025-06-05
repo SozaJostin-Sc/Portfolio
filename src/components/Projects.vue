@@ -79,6 +79,18 @@ const openProject = (project) => {
           </div>
         </article>
       </div>
+
+      <!-- BOTÓN DE MORE PROJECTS -->
+      <div class="more-projects-button-container">
+        <a
+          href="https://github.com/SozaJostin-Sc"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="more-projects-button"
+        >
+          More projects →
+        </a>
+      </div>
     </div>
   </section>
 </template>
@@ -211,6 +223,30 @@ const openProject = (project) => {
   background: #b2bec3;
   color: #2d3436;
   cursor: default;
+}
+
+.more-projects-button-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.more-projects-button {
+  background-color: #000;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid #000;
+  text-decoration: none;
+  box-shadow: 3px 3px 0 #000;
+  transition: all 0.2s ease-in-out;
+}
+
+.more-projects-button:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 2px 2px 0 #000;
 }
 
 /* Responsive */

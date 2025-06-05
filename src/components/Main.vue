@@ -16,6 +16,7 @@ import {
   vue,
   react,
   CV,
+  java,
   Hi,
 } from "../assets/index";
 // Datos para hacer el componente más mantenible
@@ -46,13 +47,12 @@ const skills = [
   { name: "Python", icon: python },
   { name: "Git", icon: git },
   { name: "Linux", icon: linux },
-];
-
-const learning = [
   { name: "Tailwind CSS", icon: tailwindcss },
   { name: "Vue.js", icon: vue },
   { name: "React", icon: react },
 ];
+
+const learning = [{ name: "Java", icon: java }];
 </script>
 
 <template>
@@ -72,8 +72,8 @@ const learning = [
         </h1>
 
         <p class="hero-description">
-          Junior web developer with a focus on clean code, responsive design,
-          and continuous learning.
+          Software developer with a focus on clean code, good practices, and
+          continuous learning.
         </p>
         <div class="hero-links">
           <a

@@ -11,6 +11,7 @@ const navLinks = [
   { name: "Home", path: "#main" },
   { name: "Projects", path: "#Projects" },
   { name: "Contact", path: "#Contact" },
+  { name: "Blog", path: "https://notesdev.hashnode.dev/", target: "_blank" },
 ];
 
 // Imágenes reactivas al tema
@@ -38,7 +39,12 @@ const toggleMenu = () => {
       <div class="nav-links" :class="{ active: isMenuOpen }">
         <ul>
           <li v-for="link in navLinks" :key="link.name">
-            <a :href="link.path" class="pixel-link" @click="isMenuOpen = false">
+            <a
+              :href="link.path"
+              class="pixel-link"
+              @click="isMenuOpen = false"
+              :target="link.target"
+            >
               {{ link.name }}
             </a>
           </li>

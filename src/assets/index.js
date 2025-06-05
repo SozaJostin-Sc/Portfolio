@@ -16,6 +16,7 @@ import tailwindcss from "./skills/tailwindcss.png";
 import vue from "./skills/vue.png";
 import js from "./skills/js.png";
 import Hi from "./hi.png";
+import java from "./skills/java.png";
 //social media
 import cv from "./social_media/cv.png";
 import linkedin from "./social_media/linkedin.svg";
@@ -35,6 +36,7 @@ export {
   Moon,
   Sun,
   css,
+  java,
   git,
   github,
   html,
