@@ -21,7 +21,7 @@ import java from "./skills/java.png";
 import cv from "./social_media/cv.png";
 import linkedin from "./social_media/linkedin.svg";
 //cv
-import CV from "./cv/CV-Es.pdf";
+import CV from "./cv/CV-EN.pdf";
 //Projects
 import Blog from "./Projects/blog.png";
 import ApiOnePiece from "./Projects/ApiOnePiece.png";
