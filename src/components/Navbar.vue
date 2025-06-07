@@ -11,7 +11,7 @@ const navLinks = [
   { name: "Home", path: "#main" },
   { name: "Projects", path: "#Projects" },
   { name: "Contact", path: "#Contact" },
-  { name: "Blog", path: "https://notesdev.hashnode.dev/", target: "_blank" },
+  { name: "Blog", path: "https://dev.to/jostin_soza_20", target: "_blank" },
 ];
 
 // Imágenes reactivas al tema
