@@ -26,12 +26,14 @@ import CV from "./cv/CV-EN.pdf";
 import Blog from "./Projects/blog.png";
 import ApiOnePiece from "./Projects/ApiOnePiece.png";
 import Coffe from "./Projects/coffe.png";
+import BoredApi from "./Projects/BoredApi.png";
 
 export {
   ApiOnePiece,
   Avatar,
   AvatarLight,
   CatWhite,
+  BoredApi,
   Cat,
   Moon,
   Sun,

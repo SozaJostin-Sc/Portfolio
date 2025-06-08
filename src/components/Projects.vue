@@ -1,6 +1,6 @@
 <script setup>
 import "../assets/themes.css";
-import { Blog, ApiOnePiece, Coffe } from "../assets/index";
+import { Blog, ApiOnePiece, Coffe, BoredApi } from "../assets/index";
 
 const projects = [
   {
@@ -29,6 +29,15 @@ const projects = [
       "A modern, responsive landing page for a specialty coffee shop, designed to showcase artisanal coffee, menu items, and the café's cozy atmosphere. ",
     tags: ["HTML5", "CSS", "Javascript"],
     link: "https://sozajostin-sc.github.io/CoffeLandingPage/",
+  },
+  {
+    id: 4,
+    title: "Bored Api",
+    image: BoredApi,
+    description:
+      "A simple React app that fetches random activities from the Bored API and displays them in a styled card using Tailwind CSS. Users can view details like type, participants, and duration — and refresh to get new activity ideas.",
+    tags: ["React", "HTML5", "Tailwindcss", "Javascript", "Vite"],
+    link: "https://bored-api-three.vercel.app/",
   },
 ];
 
